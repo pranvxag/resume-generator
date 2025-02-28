@@ -26,7 +26,7 @@ jobs:
         run: python resume_generator.py
 
       - name: Upload Resume as Artifact
-        uses: actions/upload-artifact@v3
+        uses: actions/upload-artifact@v4
         with:
           name: Resume
           path: Pranav_Agale_Resume.docx

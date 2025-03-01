@@ -1,31 +1,61 @@
 {
-    "name": "Pranav Agale",
-    "title": "Aspiring Computer Science Engineer",
-    "contact": {
-        "email": "pranav@example.com",
-        "phone": "+91 1234567890",
-        "linkedin": "linkedin.com/in/pranavagale"
+    "personal_information": {
+        "name": "Your Name",
+        "mobile": "Your Mobile Number",
+        "email": "your.email@example.com",
+        "linkedin": "https://linkedin.com/in/your-profile",
+        "github": "https://github.com/your-username"
     },
-    "skills": ["Python", "C++", "GitHub Actions", "Machine Learning"],
-    "experience": [
+    "education": [
         {
-            "role": "Software Developer Intern",
-            "company": "XYZ Tech",
-            "duration": "Jan 2024 - Present",
-            "description": "Worked on building automation scripts and APIs."
+            "institution": "Your University",
+            "degree": "Your Degree",
+            "cgpa": "Your CGPA",
+            "expected_graduation": "Month Year",
+            "location": "City, Country"
         }
     ],
-    "education": {
-        "degree": "B.Tech in Computer Science",
-        "college": "VJTI",
-        "year": "2025"
-    },
+    "experience": [
+        {
+            "organization": "Your Company",
+            "role": "Your Role",
+            "duration": "Month Year - Month Year",
+            "responsibilities": [
+                "Responsibility 1",
+                "Responsibility 2",
+                "Responsibility 3"
+            ]
+        }
+    ],
     "projects": [
         {
-            "title": "Resume Builder",
-            "description": "Automated resume generation using GitHub Actions and Python.",
-            "repo": "github.com/pranavagale/resume-builder"
+            "title": "Project Title",
+            "github": "https://github.com/your-username/project-repo",
+            "description": "Short description of your project."
+        }
+    ],
+    "technical_skills": {
+        "languages": ["Language 1", "Language 2"],
+        "technologies": ["Technology 1", "Technology 2"],
+        "database_systems": ["Database 1", "Database 2"],
+        "devops_cloud": ["Tool 1", "Tool 2"],
+        "tools": ["Tool 1", "Tool 2"]
+    },
+    "achievements": [
+        {
+            "title": "Achievement Title",
+            "project": "Project Name",
+            "link": "https://example.com",
+            "description": "Description of achievement"
+        }
+    ],
+    "position_of_responsibility": [
+        {
+            "organization": "Organization Name",
+            "location": "City, Country",
+            "role": "Your Role",
+            "duration": "Month Year - Month Year",
+            "description": "Description of responsibilities"
         }
     ]
 }
-

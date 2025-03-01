@@ -27,7 +27,7 @@ jobs:
           echo "OUTPUT_FILE=$output_file" >> $GITHUB_ENV
 
       - name: Upload Resume PDF
-        uses: actions/upload-artifact@v3
+        uses: actions/upload-artifact@v4
         with:
           name: resume-pdf
           path: ${{ env.OUTPUT_FILE }}

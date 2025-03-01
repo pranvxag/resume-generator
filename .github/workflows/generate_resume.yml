@@ -2,31 +2,30 @@ name: Generate Resume
 
 on:
   push:
-    paths:
-      - "resume.json"  # Runs when resume.json is updated
-  workflow_dispatch:  # Allows manual trigger
+    branches:
+      - main
 
 jobs:
   build:
     runs-on: ubuntu-latest
 
     steps:
-      - name: Checkout repository
+      - name: Checkout Repository
         uses: actions/checkout@v3
 
-      - name: Set up Python
-        uses: actions/setup-python@v3
+      - name: Set Up Python
+        uses: actions/setup-python@v4
         with:
-          python-version: '3.10'
+          python-version: '3.x'
 
-      - name: Install dependencies
-        run: pip install python-docx
+      - name: Install Dependencies
+        run: pip install reportlab
 
-      - name: Run resume generator script
+      - name: Generate Resume
         run: python resume_generator.py
 
-      - name: Upload Resume as Artifact
-        uses: actions/upload-artifact@v4
+      - name: Upload Resume PDF
+        uses: actions/upload-artifact@v3
         with:
-          name: Resume
-          path: Pranav_Agale_Resume.docx
+          name: resume-pdf
+          path: resume.pdf

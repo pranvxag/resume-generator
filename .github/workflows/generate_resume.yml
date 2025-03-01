@@ -22,9 +22,8 @@ jobs:
         run: pip install reportlab
 
       - name: Generate Resume
-        run: |
-          output_file=$(python -c "import resume_generator; print(resume_generator.generate_resume('resume.json'))")
-          echo "OUTPUT_FILE=$output_file" >> $GITHUB_ENV
+        run: echo "OUTPUT_FILE=$(python -c 'import resume_generator; print(resume_generator.generate_resume(\"resume.json\"))')" >> $GITHUB_ENV
+
 
       - name: Upload Resume PDF
         uses: actions/upload-artifact@v4

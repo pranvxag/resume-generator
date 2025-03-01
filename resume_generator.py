@@ -12,8 +12,10 @@ def generate_resume(input_file):
     output_file = f"{data['name'].split()[0]}_resume_{date_str}.pdf"
 
     c = canvas.Canvas(output_file, pagesize=letter)
-    width, height = letter
-    y_position = height - 40  # Start from top
+    # (Resume content code remains the same)
+    c.save()
+
+    return output_file  # ❌ No print statement here!
 
     # Name and Title
     c.setFont("Helvetica-Bold", 20)

@@ -1,34 +1,24 @@
 name: Generate Resume
 
-on:
-  push:
-    branches:
-      - main
+on: [push]
 
 jobs:
   build:
     runs-on: ubuntu-latest
-
     steps:
-      - name: Checkout Repository
-        uses: actions/checkout@v3
-
-      - name: Set Up Python
-        uses: actions/setup-python@v4
-        with:
-          python-version: '3.x'
-
-      - name: Install Dependencies
-        run: pip install reportlab
-
-      - name: Generate Resume
-        run: |
-          output_file=$(python -c "import resume_generator; print(resume_generator.generate_resume('resume.json'))")
-          echo "OUTPUT_FILE=$output_file" >> $GITHUB_ENV
-
-      - name: Upload Resume PDF
-        uses: actions/upload-artifact@v3
-        with:
-          name: resume-pdf
-          path: ${{ env.OUTPUT_FILE }}
-
+    - uses: actions/checkout@v2
+    - name: Set up Python
+      uses: actions/setup-python@v2
+      with:
+        python-version: '3.x'
+    - name: Install dependencies
+      run: |
+        python -m pip install --upgrade pip
+        pip install reportlab
+    - name: Generate Resume
+      run: python resume_generator.py
+    - name: Upload Artifact
+      uses: actions/upload-artifact@v2
+      with:
+        name: resume
+        path: '*.pdf'

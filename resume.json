@@ -1,1 +1,31 @@
+{
+    "name": "Pranav Agale",
+    "title": "Aspiring Computer Science Engineer",
+    "contact": {
+        "email": "pranav@example.com",
+        "phone": "+91 1234567890",
+        "linkedin": "linkedin.com/in/pranavagale"
+    },
+    "skills": ["Python", "C++", "GitHub Actions", "Machine Learning"],
+    "experience": [
+        {
+            "role": "Software Developer Intern",
+            "company": "XYZ Tech",
+            "duration": "Jan 2024 - Present",
+            "description": "Worked on building automation scripts and APIs."
+        }
+    ],
+    "education": {
+        "degree": "B.Tech in Computer Science",
+        "college": "VJTI",
+        "year": "2025"
+    },
+    "projects": [
+        {
+            "title": "Resume Builder",
+            "description": "Automated resume generation using GitHub Actions and Python.",
+            "repo": "github.com/pranavagale/resume-builder"
+        }
+    ]
+}
 

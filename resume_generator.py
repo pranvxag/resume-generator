@@ -1,10 +1,15 @@
 import json
+import datetime
 from reportlab.lib.pagesizes import letter
 from reportlab.pdfgen import canvas
 
-def generate_resume(input_file, output_file):
+def generate_resume(input_file):
     with open(input_file, "r") as file:
         data = json.load(file)
+
+    # Generate filename with current date in ddmmyy format
+    date_str = datetime.datetime.now().strftime("%d%m%y")
+    output_file = f"{data['name'].split()[0]}_resume_{date_str}.pdf"
 
     c = canvas.Canvas(output_file, pagesize=letter)
     width, height = letter
@@ -74,7 +79,7 @@ def generate_resume(input_file, output_file):
 
     c.save()
     print(f"Resume saved as {output_file}")
+    return output_file
 
 # Run the script
-generate_resume("resume.json", "resume.pdf")
-
+generate_resume("resume.json")
